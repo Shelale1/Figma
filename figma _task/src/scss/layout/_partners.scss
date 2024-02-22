@@ -1,0 +1,45 @@
+#partners {
+  margin-top: 120px;
+  background: rgba(252, 224, 239, 0.2);
+  padding: 80px 80px;
+
+  .container {
+    width: 1340px;
+    margin: 0 auto;
+    @include Flexible($direction: column, $gap: 80px);
+
+    h2 {
+      text-align: center;
+      color: var(--black-80, #343434);
+      font-size: 23px;
+      font-family: $default_font_family;
+      letter-spacing: 2.1px;
+    }
+
+    .images {
+      @include Flexible($justify: space-around, $direction: row, $gap: 40px);
+      cursor: pointer;
+      @media (max-width: 768px) {
+        @include Flexible($direction: column, $gap: 100px);
+        margin: 0 auto;
+        width: 400px;
+        margin-left: 400px;
+      }
+    }
+    .points {
+      @include Flexible($justify: center, $direction: row, $gap: 7px);
+
+      cursor: pointer;
+
+      i {
+        font-size: 7px;
+        color: #a4a4a4bb;
+        text-align: center;
+      }
+      i:first-child {
+        color: $primary-100;
+        text-align: center;
+      }
+    }
+  }
+}

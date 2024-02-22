@@ -1,0 +1,66 @@
+#letter {
+  margin-top: 70px;
+  background-color: #fef9fc;
+  padding: 90px 90px;
+  .container {
+    width: 1340px;
+    margin: 0 auto;
+    @media(max-width:768px){
+        
+      
+      
+      margin: 0 auto;
+      margin-left: 300px;
+      width: 500px;
+
+      
+    }
+
+    .head {
+      text-align: center;
+      @include Flexible($direction: column, $wrap: wrap, $gap: 20px);
+
+      h3 {
+        color: var(--black-80, #343434);
+        text-align: center;
+        font-size: 36px;
+        font-family: $default_font_family;
+        font-weight: 700;
+        line-height: 43px;
+      }
+      pre {
+        color: var(--black-40, #999);
+        text-align: center;
+
+        font-size: 16px;
+        font-family: $default_font_family;
+        line-height: 22px;
+      }
+    }
+    .send {
+      @include Flexible($justify: center, $direction: row, $gap: 16px);
+      text-align: center;
+      margin-top: 40px;
+
+      input {
+        width: 343px;
+        padding: 12px 15px;
+        cursor: pointer;
+
+        border-radius: 4px;
+        border: 1px solid var(--black-20, #ccc);
+        background: #fff;
+      }
+      button {
+        padding: 13px 24px;
+        cursor: pointer;
+
+        gap: 10px;
+        border-radius: 4px;
+        background-color: $primary-100;
+        color: #fff;
+        border: none;
+      }
+    }
+  }
+}

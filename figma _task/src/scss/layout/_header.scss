@@ -1,0 +1,222 @@
+header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 800px;
+
+  .container {
+    width: 1340px;
+
+    margin: 0 auto;
+    @include Flexible($direction: row, $gap: 80px);
+    font-family: $default_font_family;
+    @media (max-width:768px) {
+      @include Flexible($direction: column , $gap:100px);
+ 
+      }
+
+
+    .left-side {
+      position: relative;
+
+      width: 800px;
+      margin-top: 100px;
+      @include Flexible($direction: column, $gap: 30px);
+
+      @media (max-width:768px) {
+        width: 1000px;
+        margin: 0 auto;
+        margin-top: 70px;
+      
+      
+         
+       
+         
+        
+          
+        }
+
+      .position {
+        position: absolute;
+        @include Flexible($direction: row, $gap: 8px);
+        height: 71px;
+        width: 210px;
+        padding: 26px 44px;
+        border-radius: 55px;
+        right: -190px;
+        background: #fff;
+        box-shadow: 4px 4px 58px 0px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        @media (max-width:768px) {
+         display: none;
+ 
+            
+          }
+
+        i {
+          font-size: 20px;
+          color: $primary-100;
+          padding: 0px 0;
+          cursor: pointer;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      h2 {
+        color: $black-100;
+        font-size: 65px;
+        font-weight: 800;
+        line-height: 68px;
+      }
+
+      pre {
+        color: $black-60;
+        font-size: 16px;
+        font-family: $default_font_family;
+        line-height: 22px;
+      }
+      .buttons {
+        cursor: pointer;
+        @include Flexible($direction: row, $gap: 23px);
+
+        button:first-child {
+          width: 157px;
+          height: 46px;
+          background: $primary-100;
+          color: #fff;
+          text-align: center;
+          border: none;
+          @extend %Button_extened;
+          cursor: pointer;
+        }
+        button:nth-child(2) {
+          padding: 13px 20px;
+          background-color: #fff;
+          color: $primary-100;
+          text-align: center;
+          border: 1px solid $primary-100;
+          @extend %Button_extened;
+          cursor: pointer;
+        }
+      }
+      .icons {
+        margin-top: 80px;
+        @include Flexible($direction: row, $gap: 18px);
+        font-size: 20px;
+        cursor: pointer;
+
+        p {
+          font-weight: 600;
+        }
+        span {
+          color: $black-60;
+        }
+      }
+    }
+    .right-side {
+      width: 990px;
+      height: 695px;
+      background-position-x: -90px;
+      background-position-y: 90px;
+      margin-top: -90px;
+      background-color: #ffeaf5;
+      z-index: -1;
+      color: lightgray;
+      background-repeat: no-repeat;
+      @media (max-width:768px) {
+        margin: 800px;
+        margin: 0 auto;
+    
+      
+         
+       
+         
+        
+          
+        }
+    }
+  }
+
+  nav {
+    font-family: $default_font_family;
+
+    @media (max-width:768px) {
+     display: none;
+      
+    
+      
+     
+       
+     }
+    
+
+    .container {
+      width: 1340px;
+      padding: 15px;
+      margin: 0 auto;
+      @include Flexible(
+        $justify: space-between,
+        $direction: row,
+        $items: flex-start,
+        $gap: 60px
+        
+      );
+      
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .logo {
+        width: 120x;
+        height: 60px;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+      .search {
+        @include Flexible($direction: row, $items: center, $gap: 20px);
+
+        button {
+          background-color: $primary-100;
+          color: #fff;
+          text-align: center;
+          border: none;
+          width: 100px;
+          height: 35px;
+          padding: 8px 24px;
+
+          font-weight: 500;
+
+          @extend %Text_style;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        list-style: none;
+        margin-top: 13px;
+
+        li {
+       
+          font-family: $default_font_family;
+          text-transform: uppercase;
+          font-weight: 600;
+
+
+          @extend %Text_style;
+        }
+      }
+
+      i {
+        font-size: 22px;
+        color: $primary-100;
+        cursor: pointer;
+      }
+    }
+  }
+}
